@@ -1,5 +1,6 @@
 from dagster import asset, Definitions
-
+from ibis_duckdb_io_manager import ibis_duckdb_io_manager
+import pandas as pd
 @asset(io_manager_def=ibis_duckdb_io_manager)
 def raw_data():
     # Return a pandas DataFrame
